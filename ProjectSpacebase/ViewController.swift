@@ -33,12 +33,16 @@ class ViewController: UIViewController {
         // authentication added in v3.1
         mqtt?.username = "test"
         mqtt?.password = "public"
-        // for this learning project, the view controller is its own delegate (as per an extension file)
-        mqtt?.delegate = self
         // last will cannot be changed later: https://stackoverflow.com/questions/49163609/change-will-on-a-mqtt-connection
         // further explained: https://www.hivemq.com/blog/mqtt-essentials-part-9-last-will-and-testament/
         mqtt?.willMessage = CocoaMQTTWill( topic: "/will", message: "dieout")
         mqtt?.keepAlive = 60
+        // security now required, likely because of Apple requirements on networking
+        mqtt?.enableSSL = true
+        // must set this flag, if the server certificate is untrusted
+        mqtt?.allowUntrustCACertificate = true
+        // for this learning project, the view controller is its own delegate (as per an extension file)
+        mqtt?.delegate = self
         mqtt?.connect()
     }
 }

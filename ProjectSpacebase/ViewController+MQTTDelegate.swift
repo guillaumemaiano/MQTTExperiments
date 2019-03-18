@@ -22,12 +22,15 @@ extension ViewController: CocoaMQTTDelegate {
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
         // since the message can carry a payload, we could pass relevant data as well
         if let msgString = message.string {
-            mqttLabel.text = msgString
+            DispatchQueue.main.async {
+                self.mqttLabel.text = msgString
+            }
         }
     }
 
     // Other required methods for CocoaMQTTDelegate
     func mqtt(_ mqtt: CocoaMQTT, didReceive trust: SecTrust, completionHandler: @escaping (Bool) -> Void) {
+        // true -> trust the SSL connection
         completionHandler(true)
     }
 

@@ -125,6 +125,11 @@
 				TargetAttributes = {
 					EC1A66D5223F133600AE355A = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -355,7 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RWT6CZV7V6;
+				DEVELOPMENT_TEAM = 8LV2X84473;
 				INFOPLIST_FILE = ProjectSpacebase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,7 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RWT6CZV7V6;
+				DEVELOPMENT_TEAM = 8LV2X84473;
 				INFOPLIST_FILE = ProjectSpacebase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
