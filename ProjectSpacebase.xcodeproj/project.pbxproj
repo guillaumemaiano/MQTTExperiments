@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0139A061BE2FDDB6E08DC4 /* Pods_ProjectSpacebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C673F91CC716B0E0ADBCE05 /* Pods_ProjectSpacebase.framework */; };
 		EC1A66DA223F133600AE355A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A66D9223F133600AE355A /* AppDelegate.swift */; };
 		EC1A66DC223F133600AE355A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A66DB223F133600AE355A /* ViewController.swift */; };
 		EC1A66DF223F133600AE355A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1A66DD223F133600AE355A /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C673F91CC716B0E0ADBCE05 /* Pods_ProjectSpacebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectSpacebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C87003264BFBBCFD245DA3F9 /* Pods-ProjectSpacebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSpacebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSpacebase/Pods-ProjectSpacebase.release.xcconfig"; sourceTree = "<group>"; };
+		DDB2D32E8732596F3A56EDB2 /* Pods-ProjectSpacebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSpacebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSpacebase/Pods-ProjectSpacebase.debug.xcconfig"; sourceTree = "<group>"; };
 		EC1A66D6223F133600AE355A /* ProjectSpacebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSpacebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1A66D9223F133600AE355A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC1A66DB223F133600AE355A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0139A061BE2FDDB6E08DC4 /* Pods_ProjectSpacebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AE4B5237FFC871808A235B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C673F91CC716B0E0ADBCE05 /* Pods_ProjectSpacebase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67E486D1B66434C58209452A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDB2D32E8732596F3A56EDB2 /* Pods-ProjectSpacebase.debug.xcconfig */,
+				C87003264BFBBCFD245DA3F9 /* Pods-ProjectSpacebase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EC1A66CD223F133600AE355A = {
 			isa = PBXGroup;
 			children = (
 				EC1A66D8223F133600AE355A /* ProjectSpacebase */,
 				EC1A66D7223F133600AE355A /* Products */,
+				67E486D1B66434C58209452A /* Pods */,
+				1AE4B5237FFC871808A235B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC1A66E8223F133800AE355A /* Build configuration list for PBXNativeTarget "ProjectSpacebase" */;
 			buildPhases = (
+				470FEA109600F1E309BE60D0 /* [CP] Check Pods Manifest.lock */,
 				EC1A66D2223F133600AE355A /* Sources */,
 				EC1A66D3223F133600AE355A /* Frameworks */,
 				EC1A66D4223F133600AE355A /* Resources */,
+				C0F8CADC6F8F38F91B82CC85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		470FEA109600F1E309BE60D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProjectSpacebase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0F8CADC6F8F38F91B82CC85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ProjectSpacebase/Pods-ProjectSpacebase-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectSpacebase/Pods-ProjectSpacebase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC1A66D2223F133600AE355A /* Sources */ = {
@@ -280,6 +347,7 @@
 		};
 		EC1A66E9223F133800AE355A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDB2D32E8732596F3A56EDB2 /* Pods-ProjectSpacebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +366,7 @@
 		};
 		EC1A66EA223F133800AE355A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C87003264BFBBCFD245DA3F9 /* Pods-ProjectSpacebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
