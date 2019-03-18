@@ -13,6 +13,7 @@
 		EC1A66DF223F133600AE355A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1A66DD223F133600AE355A /* Main.storyboard */; };
 		EC1A66E1223F133800AE355A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1A66E0223F133800AE355A /* Assets.xcassets */; };
 		EC1A66E4223F133800AE355A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1A66E2223F133800AE355A /* LaunchScreen.storyboard */; };
+		ECF1B036223FC3F100E5B135 /* ViewController+MQTTDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF1B035223FC3F100E5B135 /* ViewController+MQTTDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EC1A66E0223F133800AE355A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC1A66E3223F133800AE355A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC1A66E5223F133800AE355A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECF1B035223FC3F100E5B135 /* ViewController+MQTTDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+MQTTDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				EC1A66D9223F133600AE355A /* AppDelegate.swift */,
 				EC1A66DB223F133600AE355A /* ViewController.swift */,
+				ECF1B035223FC3F100E5B135 /* ViewController+MQTTDelegate.swift */,
 				EC1A66DD223F133600AE355A /* Main.storyboard */,
 				EC1A66E0223F133800AE355A /* Assets.xcassets */,
 				EC1A66E2223F133800AE355A /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1A66DC223F133600AE355A /* ViewController.swift in Sources */,
+				ECF1B036223FC3F100E5B135 /* ViewController+MQTTDelegate.swift in Sources */,
 				EC1A66DA223F133600AE355A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
